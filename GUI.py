@@ -1,36 +1,21 @@
-from PyQt5.QtWidgets import *
-from PyQt5.QtGui import QFont
+#creating label
+from tkinter import *
 
-#maghimo_main_window
-def main():
-    app = QApplication([])
-    window = QWidget()
-    window.setGeometry(100, 100, 200, 300)
-    window.setWindowTitle("Practice GUI")
+window = Tk()
 
-#maghimog_layout
-    layout = QVBoxLayout()
-    label = QLabel("press the box below")
+label_1 = Label(window, text = "hello world", font = 5, bg = "green", fg = "red", width = 10, height = 2)
+label_1.pack()
+label_1.place(x = 5, y = 5)
 
-#mag_create_push_button
-    button = QPushButton("Press here")
+lablel_2 = Label(window, text = "Hi", font = 3, bg = "green", fg = "black", highlightcolor = "black",
+                 width = 10, height = 2)
+lablel_2.pack()
+lablel_2.place(x = 5, y = 50)
 
-#widget_sa_button_ug_layout
-    layout.addWidget(label)
-    layout.addWidget(button)
+label_3 = Label(window, text = "Christian Mayol Aribal", font = 7, bg = "yellow", fg = "blue", width = 20,
+                height = 1)
+label_3.pack()
 
-    window.setLayout(layout)
+#label_1.grid(row = 0, column = 1)
 
-
-
-    # label = QLabel(window)
-    # label.setText("hello world")
-    # label.setFont(QFont("Arial", 16))
-    # label.move(50, 100)
-
-
-    window.show()
-    app.exec()
-
-if __name__ == '__main__':
-    main()
+window.mainloop()
