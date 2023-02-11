@@ -15,7 +15,7 @@ lable_2 = Label(window, text = "This is my first time to create a Graphical user
 lable_2.place(x = 5, y = 150)
 #
 label_3 = Label(window, text = "Label", fg = "black", bg = "blue", width = 10, height = 2, highlightcolor = "black", font = (25))
-label_3.place(x = 1, y = 110)
+label_3.place(x = 1, y = 111)
 
 
 #
