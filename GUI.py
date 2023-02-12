@@ -6,7 +6,7 @@ from tkinter import *
 
 
 window = Tk()
-window.title("Personal information")
+window.title("Christian")
 window.minsize(width=800, height=700)
 window.maxsize(width=800, height=700)
 
