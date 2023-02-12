@@ -1,27 +1,67 @@
 #creating label
 import tkinter as tk
+import tkinter
+from tkinter import messagebox as msg
 from tkinter import *
+
 
 window = Tk()
 window.title("Personal information")
-window.minsize(width=400, height=400)
-#window.maxsize(width=1360, height=680)
+window.minsize(width=800, height=700)
+window.maxsize(width=800, height=700)
 
 label_1 = Label(window, text = "hello world", fg = "black", bg = "yellow", width = 15, height = 2, font=('Times New Roman', 40, 'bold'))
 label_1.pack()
 #label_1.place(x = 5, y = 5)
-lable_2 = Label(window, text = "This is my first time to create a Graphical user interface label sample", fg = "green", width = 52, height = 2, highlightcolor = "black", font=(25))
+
+label_3 = Label(window, text = "Label", fg = "white", bg = "blue", width = 10, height = 2, highlightcolor = "black", font = (25))
+label_3.place(x = 1, y = 140)
+
+lable_2 = Label(window, text = "This is my first time to create a Graphical user interface", fg = "green", width = 42, height = 2, highlightcolor = "black", font=(25))
 # lablel_2.pack()
-lable_2.place(x = 5, y = 150)
+lable_2.place(x = 5, y = 190)
 #
-label_3 = Label(window, text = "Label", fg = "black", bg = "blue", width = 10, height = 2, highlightcolor = "black", font = (25))
-label_3.place(x = 1, y = 111)
+
+label_4 = Label(window, text = "option sample", fg = "white", bg = "blue", width = 15, height = 2, highlightcolor = "black", font = (25))
+label_4.place(x = 1, y = 250)
 
 
-#
-# label_3 = Label(window, text = "Christian Mayol Aribal", font = 7, bg = "yellow", fg = "blue", width = 20, height = 1)
-# label_3.pack()
+#creating_an_option_menu
+colors = StringVar(window)
+colors.set("COLOURS")
 
-#label_1.grid(row = 0, column = 1)
+option_colors = OptionMenu(window, colors, "Yellow", "Blue", "Green", "Purple", "Black", "White")
+option_colors.place(x = 5, y = 300)
+
+numbers = StringVar(window)
+numbers.set("Numbers")
+
+option_numbers = OptionMenu(window, numbers, "one", "two", "three", "four", "five")
+option_numbers.place(x = 5, y = 330)
+
+#creating_button_with_label_and_entry_box
+variable_1 = StringVar()
+def click():
+    x = variable_1.get()
+    print(x)
+    button_click_output.config(text=x, fg="black", bg="yellow")
+button_1_label = Label(window, text="enter name", fg="blue", bg="red")
+button_1_label.place(x = 280, y = 305)
+output_label = Label(window, text="Output:", fg="red")
+output_label.place(x=165, y=370)
+button_entry = Entry(window, font=("corbel", 10), bd=5, textvariable=variable_1)
+button_entry.place(x = 350, y = 303)
+button_1 = Button(window, text="Enter", fg="red", bg="green", command=click)
+button_1.place(x = 400, y = 330)
+button_click_output = Label(window, text="                                              ")
+button_click_output.place(x = 215, y = 370)
+
+#creating_list_box
+
+
+#show_info_message
+
+#msg.showinfo( "Hello Python", "Hello World")
+
 
 window.mainloop()
