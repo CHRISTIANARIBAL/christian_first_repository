@@ -57,8 +57,17 @@ button_click_output = Label(window, text="                                      
 button_click_output.place(x = 215, y = 370)
 
 #creating_list_box
-
-
+list_box_1_label = Label(window, text=" List box sample ", fg="black", bg="magenta", font=(15))
+list_box_1_label.place(x=601, y=225)
+list_box_1 = Listbox(window, width=20, height=10)
+list_box_1.place(y=250, x=600)
+list_1 = ["Red", "White", "Green", "Violet"]
+for i in list_1:
+    list_box_1.insert(END, i)
+def list_button_click():
+    list_box_1.delete(ANCHOR)
+list_button_1 = Button(window, text="Delete", fg="white", bg="red", font=(15), command=list_button_click)
+list_button_1.place(x=633, y=415)
 #show_info_message
 
 #msg.showinfo( "Hello Python", "Hello World")
